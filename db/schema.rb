@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013211104) do
+ActiveRecord::Schema.define(version: 20141013215207) do
 
   create_table "bodies", force: true do |t|
     t.string   "name"
@@ -19,14 +19,12 @@ ActiveRecord::Schema.define(version: 20141013211104) do
     t.string   "size"
     t.string   "features"
     t.integer  "region_id"
-    t.integer  "captain_id"
     t.integer  "parent_body_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "ship_id"
   end
 
-  add_index "bodies", ["captain_id"], name: "index_bodies_on_captain_id"
   add_index "bodies", ["region_id"], name: "index_bodies_on_region_id"
   add_index "bodies", ["ship_id"], name: "index_bodies_on_ship_id"
 
