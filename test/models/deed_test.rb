@@ -9,7 +9,6 @@ class DeedTest < ActiveSupport::TestCase
     boardwalk = Property.create(name: "Boardwalk", color_group: "blue", base_rent: "4")
     vance = Player.create(name: "Vance")
     boardwalk_deed = Deed.create(property: boardwalk, player: vance, houses: 1)
-    boardwalk_deed.houses = 1
 
     assert_not boardwalk_deed.valid?
   end

@@ -9,6 +9,7 @@ class Deed < ActiveRecord::Base
   def buildable?
     group = property.color_group
     count = 0
+    puts player.inspect
     player.properties.each do |property|
       if property.color_group == group
         count += 1
