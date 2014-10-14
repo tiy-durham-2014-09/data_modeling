@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cities: MyString
+  planes: MyString
+  routes: MyString
+  passengers: MyString
+
+two:
+  cities: MyString
+  planes: MyString
+  routes: MyString
+  passengers: MyString
