@@ -11,7 +11,4 @@ class BeerStyle < ActiveRecord::Base
     BeerStyle.create(title: beer)
   end
 
-  def is(title)
-    self.where(title: title).id
-  end
 end
