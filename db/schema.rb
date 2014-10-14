@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20141013192523) do
 
   create_table "dispatchers", force: true do |t|
     t.string   "name"
+    t.integer  "manager_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
