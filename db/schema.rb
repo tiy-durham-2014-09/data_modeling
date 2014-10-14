@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013215207) do
+ActiveRecord::Schema.define(version: 20141014005019) do
 
   create_table "bodies", force: true do |t|
     t.string   "name"
-    t.string   "type"
     t.string   "size"
     t.string   "features"
     t.integer  "region_id"
