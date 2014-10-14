@@ -38,3 +38,15 @@ end
   end
 end
 
+@ships = []
+
+5.times do |s|
+  ship = Ship.create(name: 'MWASESBC ' + ['Hermes','Jolly Roger','Enterprise','Timedate Falcon','Ship of the Imagination','Polaris','Icarus','Blender','Shoebox'].sample + " " + rand(10..99).to_s)
+  @ships << ship
+end
+
+# @captains = []
+#
+# @ships.each do |s|
+#   captain = s.captain.create(name: 'Pickard Clone ' + rand(1..100))
+# end
