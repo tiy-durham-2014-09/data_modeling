@@ -11,13 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014035729) do
+ActiveRecord::Schema.define(version: 20141014051552) do
+
+  create_table "beer_logs", force: true do |t|
+    t.integer  "beer_style_id"
+    t.string   "brewer"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "beer_logs", ["beer_style_id"], name: "index_beer_logs_on_beer_style_id"
 
   create_table "beer_styles", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "cheese_logs", force: true do |t|
+    t.integer  "cheese_style_id"
+    t.string   "cheesemaker"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cheese_logs", ["cheese_style_id"], name: "index_cheese_logs_on_cheese_style_id"
 
   create_table "cheese_styles", force: true do |t|
     t.string   "title"
@@ -34,5 +54,12 @@ ActiveRecord::Schema.define(version: 20141014035729) do
 
   add_index "pairings", ["beer_style_id"], name: "index_pairings_on_beer_style_id"
   add_index "pairings", ["cheese_style_id"], name: "index_pairings_on_cheese_style_id"
+
+  create_table "ratings", force: true do |t|
+    t.integer  "rating"
+    t.integer  "rateable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

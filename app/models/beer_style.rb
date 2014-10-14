@@ -1,6 +1,7 @@
 class BeerStyle < ActiveRecord::Base
   has_many :pairings
   has_many :cheese_styles, through: :pairings
+  has_and_belongs_to_many :beer_logs
 
 
   beers = ['brown', 'porter', 'stout', 'amber ale', 'blonde ale', 'pale ale', 'american ipa', 'sour',

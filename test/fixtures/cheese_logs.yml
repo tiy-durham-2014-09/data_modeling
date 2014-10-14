@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cheese_style_id: 
+  cheesemaker: MyString
+  title: MyString
+  rateable_id: 
+
+two:
+  cheese_style_id: 
+  cheesemaker: MyString
+  title: MyString
+  rateable_id: 
