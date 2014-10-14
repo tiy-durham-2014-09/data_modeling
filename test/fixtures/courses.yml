@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  requiredbymajor: false
+  meetsonfriday: false
+  time: 2014-10-13 17:38:14
+  student_id: 
+  professor_id: 
+
+two:
+  title: MyString
+  requiredbymajor: false
+  meetsonfriday: false
+  time: 2014-10-13 17:38:14
+  student_id: 
+  professor_id: 
