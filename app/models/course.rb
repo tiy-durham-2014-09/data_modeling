@@ -1,8 +1,6 @@
 class Course < ActiveRecord::Base
-  belongs_to :student
-  belongs_to :professor
-
-  has_many :students
+  belongs_to :teachable, polymorphic: true
+  has_one :professor
 
   validates: :title, presence: true
   validates_inclusion_of: :requiredbymajor, :in => [true, false]
