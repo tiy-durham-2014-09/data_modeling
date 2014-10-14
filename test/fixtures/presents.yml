@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agegroup: MyString
+  gender: MyString
+  cost: MyString
+
+two:
+  agegroup: MyString
+  gender: MyString
+  cost: MyString

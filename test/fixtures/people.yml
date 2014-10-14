@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  relatives: MyString
+  friends: MyString
+  serviceworkers: MyString
+
+two:
+  relatives: MyString
+  friends: MyString
+  serviceworkers: MyString
