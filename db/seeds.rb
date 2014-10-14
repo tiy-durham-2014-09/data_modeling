@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+5.times do Casino.create!([ name: Faker::Company.name ])
+end
+
+5.times do Player.create!([ name: Faker::Name.name, birth_year: Faker::Date.backward(50000) ])
+end
