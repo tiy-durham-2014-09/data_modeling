@@ -9,3 +9,6 @@ class Course < ActiveRecord::Base
   validates: :professor_id, presence: true
   validates: :student_id, presence: true
 end
+
+Course.create(title: "Life in Medieval Europe").valid? # => true
+Course.create(name: nil).valid? # => false

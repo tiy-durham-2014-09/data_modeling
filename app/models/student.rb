@@ -5,3 +5,6 @@ class Student < ActiveRecord::Base
   validates: :name, presence: true
   validates: :major, presence: true
 end
+
+Student.create(name: "Seamus Finnegan").valid? # => true
+Student.create(name: nil).valid? # => false
