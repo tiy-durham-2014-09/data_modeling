@@ -1,4 +1,6 @@
 class Airport < ActiveRecord::Base
+  belongs_to :cities
+  has_many :airlines
 
 
   validates :terminals, presence: :true
