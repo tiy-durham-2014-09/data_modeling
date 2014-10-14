@@ -22,7 +22,7 @@ class Course < ActiveRecord::Base
 end
 
 Course.create(title: "Life in Medieval Europe").valid? # => true
-Course.create(name: nil).valid? # => false
+Course.create(title: nil).valid? # => false
 
 
 
