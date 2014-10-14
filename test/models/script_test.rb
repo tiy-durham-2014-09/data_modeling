@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ScriptTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "script has valid text" do
+  end
 end
