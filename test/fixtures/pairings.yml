@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beer_style_id: 
+  cheese_style_id: 
+
+two:
+  beer_style_id: 
+  cheese_style_id: 
