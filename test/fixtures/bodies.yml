@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  type: 
   size: MyString
 
 two:
   name: MyString
-  type: 
   size: MyString
