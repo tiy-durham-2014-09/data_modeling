@@ -26,27 +26,28 @@ Stock.delete_all
                       username: f_username,
                       birthday: Faker::Date.between(150.years.ago, 18.years.ago))
 
-  profile = Profile.create!(description: Faker::Company.catch_phrase,
-                  category: categories.sample)
-
-  Portfolio.create!(user_id: user.id,
-                    profileable_id: profile.id,
-                    profileable_type: "Portfolio",
+  portfolio = Portfolio.create!(user_id: user.id,
                     name: f_portfolio_name)
+
+  Profile.create!(description: Faker::Company.catch_phrase,
+                  category: categories.sample,
+                  profileable_id: portfolio.id,
+                  profileable_type: "Portfolio")
 
   rand(1..5).times do
     company = Faker::Company.name
     ticker = ("A".."Z").to_a.sample(rand(3..4)).join
 
-    Profile.create!(description: Faker::Company.catch_phrase,
-                    category: categories.sample)
-
-    stock = Stock.create!(user_id: user.id,
-                          profileable_id: profile.id,
-                          profileable_type: "Stock",
+    stock = Stock.create!(portfolio_id: portfolio.id,
                           name: company,
                           ticker: ticker,
                           price: rand(100))
+
+    Profile.create!(description: Faker::Company.catch_phrase,
+                    category: categories.sample,
+                    profileable_id: stock.id,
+                    profileable_type: "Stock")
+
   end
 
 end

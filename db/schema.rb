@@ -11,18 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014041108) do
+ActiveRecord::Schema.define(version: 20141015041141) do
 
   create_table "portfolios", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "profileable_id"
-    t.string   "profileable_type"
   end
 
-  add_index "portfolios", ["profileable_id", "profileable_type"], name: "index_portfolios_on_profileable_id_and_profileable_type"
   add_index "portfolios", ["user_id"], name: "index_portfolios_on_user_id"
 
   create_table "profiles", force: true do |t|
@@ -30,6 +27,8 @@ ActiveRecord::Schema.define(version: 20141014041108) do
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "profileable_id"
+    t.string   "profileable_type"
   end
 
   create_table "stocks", force: true do |t|
@@ -38,13 +37,10 @@ ActiveRecord::Schema.define(version: 20141014041108) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "price"
-    t.integer  "user_id"
-    t.integer  "profileable_id"
-    t.string   "profileable_type"
+    t.integer  "portfolio_id"
   end
 
-  add_index "stocks", ["profileable_id", "profileable_type"], name: "index_stocks_on_profileable_id_and_profileable_type"
-  add_index "stocks", ["user_id"], name: "index_stocks_on_user_id"
+  add_index "stocks", ["portfolio_id"], name: "index_stocks_on_portfolio_id"
 
   create_table "users", force: true do |t|
     t.string   "username"
